@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 24" width="1200" height="24" role="img" aria-label="divider">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3cf2ff" stop-opacity="0"/>
+      <stop offset="0.2" stop-color="#3cf2ff"/>
+      <stop offset="0.5" stop-color="#9d7bff"/>
+      <stop offset="0.8" stop-color="#ff4fd8"/>
+      <stop offset="1" stop-color="#ff4fd8" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#fff" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <style>
+    @keyframes fly { from { transform: translateX(-160px) } to { transform: translateX(1200px) } }
+    .beam { animation: fly 3.5s cubic-bezier(.6,0,.4,1) infinite; }
+  </style>
+  <line x1="0" y1="12" x2="1200" y2="12" stroke="url(#g)" stroke-width="1.5"/>
+  <g fill="#3cf2ff"><rect x="560" y="9" width="6" height="6" transform="rotate(45 563 12)"/><rect x="597" y="8" width="8" height="8" fill="#9d7bff" transform="rotate(45 601 12)"/><rect x="636" y="9" width="6" height="6" fill="#ff4fd8" transform="rotate(45 639 12)"/></g>
+  <rect class="beam" x="0" y="11" width="160" height="2" fill="url(#beam)"/>
+</svg>
