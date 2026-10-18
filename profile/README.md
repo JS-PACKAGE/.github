@@ -13,7 +13,7 @@
 ![WebGPU](https://img.shields.io/badge/WebGPU-05060f?style=flat-square&logo=webgpu&logoColor=9d7bff)
 ![WebRTC](https://img.shields.io/badge/WebRTC-05060f?style=flat-square&logo=webrtc&logoColor=ff4fd8)
 
-<sub><code>&gt;_ 一座漂浮在 Web 星系裡的 JavaScript / TypeScript 套件倉庫 —— AI、即時通訊、遊戲引擎、音訊合成，全部在同一條軌道上運行。</code></sub>
+<sub><code>&gt;_ 一座漂浮在 Web 星系裡的 JavaScript / TypeScript 套件倉庫 —— AI、即時通訊、遊戲引擎、音訊合成、專案規劃與主機監控，全部在同一條軌道上運行。</code></sub>
 
 </div>
 
@@ -26,9 +26,10 @@
 [ 0.042 ] mounting sector 0x01 INTELLIGENCE ......... Neko.js · WebChatMCP.js · Gauge.js
 [ 0.117 ] mounting sector 0x02 SIMULATION ........... XYZ.js · Beacon.js
 [ 0.203 ] mounting sector 0x03 SIGNAL ............... Stage.js · OPM.js · LINE.js
-[ 0.288 ] mounting sector 0x04 TESTBED .............. demos
-[ 0.300 ] uplink -> https://js-package.xyz .......... [ OK ]
-[ 0.301 ] all systems nominal. welcome aboard, pilot.
+[ 0.288 ] mounting sector 0x04 OPERATIONS ........... CProject.js · Pulse.js
+[ 0.330 ] mounting sector 0x05 TESTBED .............. demos
+[ 0.342 ] uplink -> https://js-package.xyz .......... [ OK ]
+[ 0.343 ] all systems nominal. welcome aboard, pilot.
 ```
 
 ## 🌌 STAR MAP
@@ -38,25 +39,32 @@
 | MODULE | CORE | TRANSMISSION | PORTAL |
 | :-- | :-: | :-- | :-: |
 | 🟢&nbsp;**[Neko.js](https://github.com/JS-PACKAGE/Neko.js)** | `TS` | 本機多模態推論 SDK：在 Node.js 與 WebGPU 瀏覽器上跑文字／影像推論、PDF 擷取、OCR 與文件查詢，Qwen × ONNX 驅動。 | [⟶](http://neko.js-package.xyz/) |
-| 🟢&nbsp;**[WebChatMCP.js](https://github.com/JS-PACKAGE/WebChatMCP.js)** | `JS` | 內建瀏覽器的 MCP server，經 ChatGPT／Claude／Grok／Gemini 的臨時對話送出 prompt，不留聊天紀錄，支援訪客模式。 | [⟶](https://webchatmcp.js-package.xyz) |
+| 🟢&nbsp;**[WebChatMCP.js](https://github.com/JS-PACKAGE/WebChatMCP.js)** | `JS` | 內建瀏覽器的 MCP server，串接 ChatGPT／Claude／Grok／Gemini，嘗試使用臨時／私密對話；提供 OMP、Pi、Codex、Claude Code、Grok Build 與 Hermes 外掛及本機工具往返，訪客模式限 ChatGPT／Gemini，資料保留依各服務政策。 | [⟶](https://webchatmcp.js-package.xyz) |
 | 🟢&nbsp;**[Gauge.js](https://github.com/JS-PACKAGE/Gauge.js)** | `TS` | 自架 AI 訂閱額度儀表板（Antigravity、Codex、Claude、Grok），PWA + Web Push 警報，零 runtime 依賴。 | [⟶](http://gauge.js-package.xyz/) |
 
 ### `0x02` SIMULATION — 模擬引擎
 
 | MODULE | CORE | TRANSMISSION | PORTAL |
 | :-- | :-: | :-- | :-: |
-| 🟣&nbsp;**[XYZ.js](https://github.com/JS-PACKAGE/XYZ.js)** | `TS` | The Final Web Game Engine. | [⟶](http://xyz.js-package.xyz/) |
-| 🟣&nbsp;**[Beacon.js](https://github.com/JS-PACKAGE/Beacon.js)** | `TS` | WSS + OAuth 遊戲分區大廳：持久房間、隊伍、配對、聊天與管理介面，可選 etcd quorum 跨主機 HA。 | [⟶](http://beacon.js-package.xyz/) |
+| 🟣&nbsp;**[XYZ.js](https://github.com/JS-PACKAGE/XYZ.js)** | `TS` | 瀏覽器原生 2D／3D 遊戲引擎：WebGPU／WebGL2 渲染、Canvas2D 的 2D 降級、ECS、glTF／PBR 與 OPM 音訊整合。 | [⟶](http://xyz.js-package.xyz/) |
+| 🟣&nbsp;**[Beacon.js](https://github.com/JS-PACKAGE/Beacon.js)** | `TS` | WSS + OAuth 多人遊戲大廳：SQLite 持久房間、隊伍、配對、聊天與 TypeScript client SDK，可選 etcd 協調跨主機 HA。 | [⟶](http://beacon.js-package.xyz/) |
 
 ### `0x03` SIGNAL — 訊號與音訊
 
 | MODULE | CORE | TRANSMISSION | PORTAL |
 | :-- | :-: | :-- | :-: |
-| 🔵&nbsp;**[Stage.js](https://github.com/JS-PACKAGE/Stage.js)** | `TS` | 多人音訊舞台：WebSocket 控制平面 × WebRTC 音訊平面，伺服器端混音成單一 Opus 串流。 | — |
+| 🔵&nbsp;**[Stage.js](https://github.com/JS-PACKAGE/Stage.js)** | `TS` | 可自架、可嵌入網站的多人音訊舞台：WebRTC 音訊 × WebSocket 控制，伺服器端 Opus 混音、多房間、舉手上台與主控管理，附瀏覽器 SDK、Web Component 與範例前端。 | — |
 | 🔵&nbsp;**[OPM.js](https://github.com/JS-PACKAGE/OPM.js)** | `TS` | 4-op FM 合成引擎，向 Yamaha YM2151 致敬。 | [⟶](http://opm.js-package.xyz/) |
-| 🔵&nbsp;**[LINE.js](https://github.com/JS-PACKAGE/LINE.js)** | `TS` | 本機 TypeScript LINE 網頁客戶端，WebSocket 即時同步頻道與訊息。 | [⟶](http://line.js-package.xyz/) |
+| 🔵&nbsp;**[LINE.js](https://github.com/JS-PACKAGE/LINE.js)** | `TS` | 非官方本機 LINE 網頁客戶端：QR 登入、即時聊天、群組／OpenChat、媒體傳送、CLI 與 WebSocket 機器人 API；可選 AI 詐騙機率分析，使用非官方 API 有帳號風險。 | [⟶](http://line.js-package.xyz/) |
 
-### `0x04` TESTBED — 試驗場
+### `0x04` OPERATIONS — 工作區與監控
+
+| MODULE | CORE | TRANSMISSION | PORTAL |
+| :-- | :-: | :-- | :-: |
+| **[CProject.js](https://github.com/JS-PACKAGE/CProject.js)** | `TS` | 自架行事曆與專案規劃工具：React + Node.js／SQLite 共享工作區，支援任務依賴、重複事件、提醒與多語介面，需連線後端使用。 | — |
+| **[Pulse.js](https://github.com/JS-PACKAGE/Pulse.js)** | `TS` | 自架 Linux／macOS 多主機即時監控：CPU、記憶體、多 GPU、磁碟、網路與系統更新提醒，搭配 React 面板、Node.js agents 與 Cloudflare Zero Trust 存取保護。 | [⟶](https://js-package.github.io/Pulse.js/) |
+
+### `0x05` TESTBED — 試驗場
 
 | MODULE | CORE | TRANSMISSION | PORTAL |
 | :-- | :-: | :-- | :-: |
